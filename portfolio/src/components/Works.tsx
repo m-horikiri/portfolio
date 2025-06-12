@@ -38,13 +38,13 @@ export default function Works() {
           img: php01,
           text: 'フォーム送信時の自動メール送信の仕組みをAPIエンドポイント形式に変更。変更前は運用しているフォームごとにPHPMailerをインストールする必要があり、バリデーションもまともに行われていなかった為、保守性や安全性に欠けていた。エンドポイント形式にすることで、フォームを一本化することに成功した他、細やかなバリデーションや変数の.envファイル化により安全性・保守性を向上させた。',
           url: 'https://www.clairvoyancecorp.com/form/v3/',
-          gitUrl: '',
+          gitUrl: 'https://github.com/m-horikiri/portfolio/tree/main/form',
         },
         {
           label: 'Google広告API連携',
           img: php02,
           text: '既存のシステムとGoogle広告APIを連携させるプロジェクトにて、デモコードの作成を担当。既存システムの仕様で分かっている情報が「PHPを使っている」ことのみだったが、Dockerを用いて開発環境を1から構築し、可能な限りそのまま組み込めるであろうコードを作成。Google広告APIのリファレンスを詳細に読み込み、仕様について共有する資料も作成した。',
-          gitUrl: '',
+          gitUrl: 'https://github.com/m-horikiri/portfolio/tree/main/googleApi',
         },
       ],
     },
@@ -56,35 +56,38 @@ export default function Works() {
           img: wordPress01,
           text: 'ペライチで作成していたサイトをWordPress化。WordPress導入・テーマ構築を担当。カスタム投稿タイプとカスタムフィールドを設定し、クライアント側でも容易に更新できるよう設定した。',
           url: 'https://kirari-ph.co.jp/',
-          gitUrl: '',
+          gitUrl:
+            'https://github.com/m-horikiri/portfolio/tree/main/kirariPharmacy',
         },
         {
           label: '株式会社PIA 公式サイト',
           img: wordPress02,
           text: 'コーポレートサイトにコラムサイトを合体するプロジェクトにて、WordPressの移植・テーマ構築を担当。目次やページャーなどのパーツは自作し、細かなカスタマイズを実現した。更新の可能性が高いページの殆どをWordPress上で変更できるように構築した為、SEOマーケターが自由に更新可能。',
           url: 'https://www.pi-a.jp/',
-          gitUrl: '',
+          gitUrl: 'https://github.com/m-horikiri/portfolio/tree/main/pia',
         },
         {
           label: 'MSクリニック横浜 公式サイトコラムページ',
           img: wordPress03,
           text: '既存の静的サイトにWordPressでコラムページを追加するプロジェクトにて、WordPress導入・テーマ構築を担当。外部のライターが自由に投稿・編集できるように構築。',
           url: 'https://www.ipsos-reid.com/column/',
-          gitUrl: '',
+          gitUrl:
+            'https://github.com/m-horikiri/portfolio/tree/main/msYokohama',
         },
         {
           label: '桂屋ファイングッズ ECサイト検索機能追加',
           img: wordPress04,
           text: 'Welcartで構成されているECサイトの商品絞り込み機能を追加。このサイト自体は他にも多数のカスタマイズを実施。テーマの構築自体は他社が行っており、独自のカスタマイズ等が散見される中で、できるだけクライアントの要望に応えられるように尽力した。',
           url: 'https://www.katsuraya-fg.com/onlineshop/',
-          gitUrl: '',
+          gitUrl: 'https://github.com/m-horikiri/portfolio/tree/main/katsuraya',
         },
         {
           label: '株式会社クレアテラ EC機能追加',
           img: wordPress05,
           text: '既存WordPressサイトにWelcartを追加することでEC機能を追加。デザインからWelcart導入・カスタマイズの全てを担当。既存のテーマに影響を及ぼさないよう子テーマで開発し、Welcartの機能も必要なものだけに絞り込んで実装した。',
           url: 'https://createrra.co.jp/createrrashop/',
-          gitUrl: '',
+          gitUrl:
+            'https://github.com/m-horikiri/portfolio/tree/main/createrra/',
         },
         {
           label: '有限会社ケニックシステム 公式サイト',
@@ -114,6 +117,7 @@ export default function Works() {
           img: others03,
           text: '広告出稿用のLPをデザイン・コーディング。学生向けのデザインを強く意識し、クライアントにも大変評価いただいた。',
           url: 'https://emi-more.com/lp/class_tshirts',
+          gitUrl: 'https://github.com/m-horikiri/portfolio/tree/main/maksLp',
         },
       ],
     },
@@ -189,20 +193,26 @@ export default function Works() {
                   <a
                     href={selectedItem.url}
                     target="_blank"
-                    className="text-blue-500 hover:underline block mb-2"
+                    className="text-white bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:bg-gradient-to-br font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5"
                   >
                     サイトを見る
-                    <FontAwesomeIcon icon={faShareFromSquare} className='ml-1' />
+                    <FontAwesomeIcon
+                      icon={faShareFromSquare}
+                      className="ml-2"
+                    />
                   </a>
                 )}
                 {selectedItem.gitUrl && (
                   <a
                     href={selectedItem.gitUrl}
                     target="_blank"
-                    className="text-blue-500 hover:underline"
+                    className="text-white bg-gradient-to-r from-indigo-600 via-indigo-700 to-indigo-800 hover:bg-gradient-to-br font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   >
                     GitHubのソースコード
-                    <FontAwesomeIcon icon={faShareFromSquare} className='ml-1' />
+                    <FontAwesomeIcon
+                      icon={faShareFromSquare}
+                      className="ml-2"
+                    />
                   </a>
                 )}
               </motion.div>
