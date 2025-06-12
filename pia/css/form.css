@@ -1,0 +1,81 @@
+@charset 'utf-8';
+.formWrap{
+	margin-bottom: 8rem;
+	padding: 3rem 2rem 5rem;
+}
+.formWrap .formDl dt{
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.formWrap .formDl dt .required{
+	display: block;
+	padding: .5rem;
+	border-radius: .5rem;
+	background-color: var(--colorRed);
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--colorWhite);
+	text-align: center;
+}
+.formWrap .formDl dd{
+	margin-bottom: 3rem;
+}
+.formWrap .formDl dd input,
+.formWrap .formDl dd textarea{
+	width: 100%;
+	padding: 1rem 1.5rem;
+	background-color: var(--colorWhite);
+	line-height: 1.25;
+}
+.formWrap .formDl dd textarea{
+	height: 10em;
+}
+.formWrap .formDl dd input::placeholder,
+.formWrap .formDl dd textarea::placeholder{
+	color: var(--colorGray);
+}
+.formWrap .formDl dd .formList li{
+	margin-bottom: 2rem;
+}
+.formWrap .formDl dd .formList li:last-of-type{
+	margin-bottom: 0;
+}
+.formWrap .formDl dd.pp{
+	height: 18rem;
+	margin-bottom: 0;
+	padding: 1rem;
+	background-color: var(--colorWhite);
+	overflow-y: auto;
+}
+.formWrap .formDl dd.pp p{
+	margin-bottom: 1.5rem;
+	line-height: 1.5;
+	font-size: 1.2rem;
+}
+.formWrap .formDl dd.pp p:last-of-type{
+	margin-bottom: 0;
+}
+.formWrap .agreeText{
+	margin: 3rem auto;
+	line-height: 1.25;
+	font-size: 1.4rem;
+	text-align: center;
+}
+.formWrap .submitBtn input[type="submit"]{
+	width: 100%;
+	padding: 1.5rem 0;
+	border-radius: 100vh;
+	background-color: var(--colorRed);
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--colorWhite);
+	text-align: center;
+}
+@media screen and (min-width: 1150px){
+	.formWrap{
+		max-width: 50rem;
+		margin: 0 auto;
+	}	
+}

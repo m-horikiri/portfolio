@@ -1,0 +1,265 @@
+@charset 'utf-8';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+:root{
+	--ten: 10px;
+	--colorBlack: #000000;
+	--colorDarkGray: #555555;
+	--colorGray: #F5F5F5;
+	--colorWhite: #FFFFFF;
+	--colorNavy: #0A0D61;
+	--colorBlue: #237FC6;
+	--colorLightBlue: #E8F7F9;
+	--colorGreen: #009999;
+	--colorYellow: #FFF880;
+	--colorRed: #E62326;
+}
+#tinymce{
+	margin: initial !important;
+	padding: calc(3 * var(--ten)) !important;
+}
+#tinymce *{
+    margin: initial;
+    padding: initial;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    line-height: 1.25;
+    font-size: calc(1.6 * var(--ten));
+    font-weight: initial;
+    text-align: initial;
+    text-decoration: none;
+}
+#tinymce a,
+#tinymce span{
+	line-height: inherit;
+}
+#tinymce a{
+	color: var(--colorNavy);
+	text-decoration: underline;
+}
+#tinymce img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+#tinymce h2{
+	margin-bottom: calc(3 * var(--ten));
+	padding: var(--ten) calc(1.5 * var(--ten));
+	display: flex;
+	background-color: var(--colorGreen);
+	line-height: 1.25;
+	font-size: calc(2 * var(--ten));
+	font-weight: bold;
+	color: var(--colorWhite);
+}
+#tinymce h2:before{
+	content: '\f14a';
+	margin-right: .5em;
+	font: var(--fa-font-solid);
+	line-height: inherit;
+}
+#tinymce b,
+#tinymce em,
+#tinymce strong{
+	font-weight: bold;
+}
+#tinymce em,
+#tinymce i{
+	font-style: italic;
+}
+#tinymce del{
+	text-decoration: line-through;
+}
+#tinymce u{
+	text-decoration: underline;
+}
+#tinymce .redText{
+	color: var(--colorRed);
+}
+#tinymce mark,
+#tinymce .yellowMarkerText{
+	padding: 0 .5em;
+	background-color: var(--colorYellow);
+}
+#tinymce h3{
+	margin-bottom: calc(3 * var(--ten));
+	padding: var(--ten) calc(1.5 * var(--ten));
+	border-bottom: calc(.1 * var(--ten)) solid var(--colorGreen);
+	background-color: var(--colorLightBlue);
+	line-height: 1.25;
+	font-size: calc(1.8 * var(--ten));
+	font-weight: bold;
+}
+#tinymce h4{
+	margin-bottom: calc(3 * var(--ten));
+	padding: var(--ten) calc(1.5 * var(--ten));
+	background-color: var(--colorGray);
+	font-size: calc(1.8 * var(--ten));
+	font-weight:bold;
+}
+#tinymce hr{
+	margin: calc(3 * var(--ten)) auto;
+	border: calc(.1 * var(--ten)) solid var(--colorGreen);
+}
+#tinymce p{
+	margin-bottom: calc(2 * var(--ten));
+	line-height: 1.75;
+	font-size: calc(1.6 * var(--ten));
+}
+#tinymce p:has(> img){
+	max-width: calc(42 * var(--ten));
+	margin: 0 auto calc(2 * var(--ten));
+}
+#tinymce .wp-caption{
+	width: 100% !important;
+	max-width: calc(42 * var(--ten));
+	margin: 0 auto calc(2 * var(--ten));
+}
+#tinymce .wp-caption .wp-caption-dd{
+	margin: initial;
+	padding: var(--ten);
+	background-color: var(--colorGray);
+	line-height: 1.25;
+	font-size: calc(1.4 * var(--ten));
+}
+#tinymce a[target="_blank"]:after{
+	content: '\f08e';
+	margin-left: .5em;
+	margin-right: .25em;
+	font: var(--fa-font-solid);
+	line-height: inherit;
+	color: var(--colorNavy);
+}
+#tinymce ul,
+#tinymce ol{
+	width: calc(100% - 1em);
+	margin: calc(3 * var(--ten)) 0 calc(3 * var(--ten)) auto;
+}
+#tinymce ul{
+	list-style: '\f111';
+}
+@counter-style olList{
+	system: extends decimal;
+	suffix: ".";
+}
+#tinymce ol{
+	list-style: olList;
+}
+#tinymce ul li,
+#tinymce ol li{
+	margin-bottom: calc(1.5 * var(--ten));
+	padding-left: .5em;
+	list-style: inherit;
+	line-height: 1.25;
+	font-weight: bold;
+}
+#tinymce ul li:last-of-type,
+#tinymce ol li:last-of-type{
+	margin-bottom: initial;
+}
+#tinymce ul li::marker{
+	font: var(--fa-font-solid);
+	line-height: inherit;
+	color: var(--colorGreen);
+}
+#tinymce ol li::marker{
+	color: var(--colorGreen);
+}
+#tinymce table{
+	margin: calc(3 * var(--ten)) auto;
+	display: block;
+	overflow-x: auto;
+}
+#tinymce table thead,
+#tinymce table tbody{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	border: calc(.1 * var(--ten)) solid var(--colorDarkGray);
+}
+#tinymce table thead:has(tr th:nth-of-type(4)),
+#tinymce table tbody:has(tr td:nth-of-type(4)){
+	min-width: calc(60 * var(--ten));
+}
+#tinymce table thead:has(+ tbody){
+	border-bottom: none;
+}
+#tinymce table thead tr,
+#tinymce table tbody tr{
+	border-bottom: calc(.1 * var(--ten)) solid var(--colorDarkGray);
+}
+#tinymce table thead tr:last-of-type,
+#tinymce table tbody tr:last-of-type{
+	border-bottom: none;
+}
+#tinymce table thead tr th,
+#tinymce table tbody tr th,
+#tinymce table thead tr td,
+#tinymce table tbody tr td{
+	padding: calc(1.5 * var(--ten)) var(--ten);
+	border-right: calc(.1 * var(--ten)) solid var(--colorDarkGray);
+	line-height: 1.5;
+	font-size: calc(1.4 * var(--ten));
+	vertical-align: middle;
+}
+#tinymce table thead tr th:last-of-type,
+#tinymce table tbody tr th:last-of-type,
+#tinymce table thead tr td:last-of-type,
+#tinymce table tbody tr td:last-of-type{
+	border-right: none;
+}
+#tinymce table thead tr th,
+#tinymce table tbody tr th{
+	background-color: var(--colorLightBlue);
+	font-weight: bold;
+	text-align: center;
+}
+#tinymce table thead tr td,
+#tinymce table tbody tr td{
+	text-align: left;
+}
+#tinymce table thead tr th + td,
+#tinymce table tbody tr th + td{
+	border-left: calc(.1 * var(--ten)) solid var(--colorDarkGray);
+}
+#tinymce table thead tr th p,
+#tinymce table tbody tr th p,
+#tinymce table thead tr td p,
+#tinymce table tbody tr td p{
+	margin-bottom: calc(1.5 * var(--ten));
+	line-height: 1.5;
+	text-align: inherit;
+}
+#tinymce table thead tr th p:last-of-type,
+#tinymce table tbody tr th p:last-of-type,
+#tinymce table thead tr td p:last-of-type,
+#tinymce table tbody tr td p:last-of-type{
+	margin-bottom: initial;
+}
+#tinymce blockquote{
+	margin: calc(3 * var(--ten)) auto;
+	padding: calc(3 * var(--ten));
+	position: relative;
+	background-color: var(--colorGray);
+}
+#tinymce blockquote:before,
+#tinymce blockquote:after{
+	position: absolute;
+	font: var(--fa-font-solid);
+	line-height: inherit;
+	font-size: calc(2 * var(--ten));
+	color: var(--colorGreen);
+}
+#tinymce blockquote:before{
+	content: '\f10d';
+	top: var(--ten);
+	left: var(--ten);
+}
+#tinymce blockquote:after{
+	content: '\f10e';
+	bottom: var(--ten);
+	right: var(--ten);
+}
+#tinymce blockquote p:last-of-type{
+	margin-bottom: initial;
+}

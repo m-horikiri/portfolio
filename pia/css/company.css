@@ -1,0 +1,95 @@
+@charset 'utf-8';
+.messageList li{
+	margin-bottom: 2rem;
+	padding: 2rem;
+	background-color: var(--colorWhite);
+}
+.messageList li:last-of-type{
+	margin-bottom: 0;
+}
+.messageList .flexWrap{
+	margin-bottom: 2.5rem;
+	display: flex;
+	justify-content: space-between;
+} 
+.messageList .textBox{
+	width: calc(100% - 12rem);
+}
+.messageList .imgBox{
+	width: 10rem;
+}
+.messageList .middleHeading{
+	margin-bottom: 1rem;
+	padding-bottom: .5rem;
+	border-bottom: .1rem solid var(--colorDarkGray);
+	border-left: none;
+	font-size: 2rem;
+	color: var(--colorDarkGray);
+}
+.messageList .text{
+	line-height: 1.5;
+}
+.messageList .text a{
+	display: inline;
+	color: var(--colorNavy);
+	text-decoration: underline;
+}
+.aboutUsDl{
+	display: flex;
+	flex-wrap: wrap;
+}
+.aboutUsDl:first-of-type{
+	border-top: .1rem solid var(--colorDarkGray);
+}
+.aboutUsDl dt,
+.aboutUsDl dd{
+	padding: 2rem 1rem;
+	border-bottom: .1rem solid var(--colorDarkGray);
+	line-height: 1.5;
+}
+.aboutUsDl dt{
+	width: 10rem;
+	font-weight: bold;
+}
+.aboutUsDl dd{
+	width: calc(100% - 10rem);
+}
+.aboutUsDl .objectivesList li{
+	margin-bottom: .5rem;
+	line-height: 1.25;
+}
+.aboutUsDl .objectivesList li:last-of-type{
+	margin-bottom: 0;
+}
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
+			PC
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@media screen and (min-width: 1150px) {
+	.messageList{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.messageList li{
+		width: calc((100% - 2rem) / 2);
+		margin-bottom: 2rem;
+	}
+	.messageList li:last-of-type{
+		margin-bottom: 0;
+	}
+	.flexWrap{
+		display: flex;
+		justify-content: space-between;
+	}
+	.flexWrap .aboutUsDl{
+		width: calc((100% - 2rem) / 2);
+		border-top: .1rem solid var(--colorDarkGray);
+	}
+	.flexWrap .aboutUsDl dt{
+		width: 15rem;
+		padding-left: 3rem;
+	}
+	.flexWrap .aboutUsDl dd{
+		width: calc(100% - 15rem);
+	}
+}

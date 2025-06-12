@@ -1,0 +1,38 @@
+services:
+  app:
+    build: ./infra/php
+    volumes:
+      - ./laravel:/var/www
+      - /laravel/node_modules
+      - /laravel/vendor
+    ports:
+      - 443:443
+      - 5173:5173
+    depends_on:
+      - db
+  db:
+    image: mariadb:latest
+    volumes:
+      - ./infra/db:/var/lib/mysql/
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=*****
+      - MYSQL_ROOT_PASSWORD=*****
+      - TZ=Asia/Tokyo
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+  pma:
+    image: phpmyadmin:latest
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=*****
+      - TZ=Asia/Tokyo
+    depends_on:
+      - db

@@ -1,0 +1,12 @@
+@charset 'utf-8';
+main > .largeSection:first-of-type{
+	margin-top: 2rem;
+}
+.newsList{
+	margin-bottom: 2rem;
+}
+@media screen and (min-width: 1150px) {
+	main > .largeSection:first-of-type{
+		margin-top: 0;
+	}
+}

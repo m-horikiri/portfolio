@@ -1,0 +1,149 @@
+@charset 'utf-8';
+:root{
+    font-size: 10px;
+    --black: #000000;
+    --darkGray: #626262;
+    --gray: #EEEEEE;
+    --white: #FFFFFF;
+    --navy: #0C55A5;
+    --blue: #54C3F1;
+    --lightBlue: #F1FCFF;
+    --red: #A60E0C;
+}
+#tinymce{
+    padding: 3rem;
+}
+#tinymce *{
+    margin: initial;
+    padding: initial;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    line-height: 1.25;
+    font-size: initial;
+    font-weight: initial;
+    text-align: initial;
+    text-decoration: none;
+}
+#tinymce img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#tinymce p{
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+#tinymce p.rightText{
+    text-align: right;
+}
+#tinymce p.strongText{
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#tinymce > p > a:not(.commonBtn){
+    display: inline;
+    color: var(--navy);
+    text-decoration: underline;
+}
+#tinymce .middleHeading{
+    margin: 4rem auto 3rem;
+    padding: .5rem 2rem;
+    border-bottom: .1rem solid var(--blue);
+    border-left: .8rem solid var(--blue);
+    font-size: 2.4rem;
+}
+#tinymce .middleHeading .jpText{
+    margin-left: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+#tinymce .middleHeading .jpText:before,
+#tinymce .middleHeading .jpText:after{
+    content: '';
+    width: .5em;
+    height: .1rem;
+    background-color: var(--black);
+}
+#tinymce .smallHeading{
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-top: .2rem dashed var(--darkGray);
+    border-bottom: .2rem dashed var(--darkGray);
+    background-color: var(--lightBlue);
+    font-size: 2rem;
+    font-weight: bold;
+}
+#tinymce .noticeText{
+    padding-left: 1em;
+    text-indent: -1em;
+}
+#tinymce .boldText{
+    font-weight: bold;
+}
+#tinymce .bnrBox{
+    width: fit-content;
+    margin: 2rem auto;
+}
+#tinymce .bnrBox a{
+    display: inline;
+}
+#tinymce .bnrBox img{
+    width: initial;
+}
+#tinymce .twoColumnDl{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: .1rem solid var(--darkGray);
+    border-bottom: .1rem solid var(--darkGray);
+}
+#tinymce .twoColumnDl dt,
+#tinymce .twoColumnDl dd{
+    padding: 2rem 1rem;
+    border-bottom: .2rem dashed var(--darkGray);
+}
+#tinymce .twoColumnDl dt:last-of-type,
+#tinymce .twoColumnDl dd:last-of-type{
+    border-bottom: none;
+}
+#tinymce .twoColumnDl dt{
+    width: 25%;
+    background-color: var(--lightBlue);
+}
+#tinymce .twoColumnDl dd{
+    width: 75%;
+}
+#tinymce .twoColumnDl dd a{
+    display: inline;
+    color: var(--navy);
+    text-decoration: underline;
+}
+#tinymce .columnBox.dashed{
+    padding: 2rem 0;
+    border-top: .2rem dashed var(--darkGray);
+    border-bottom: .2rem dashed var(--darkGray);
+}
+#tinymce .columnBox.dashed:has(+ .columnBox.dashed){
+    border-bottom: none;
+}
+#tinymce .columnBox .imgBox{
+    margin-bottom: 2rem;
+}
+#tinymce .columnBox .textBox p:last-of-type{
+    margin-bottom: initial;
+}
+#tinymce .checkIconText{
+    margin-right: 1em;
+    display: inline-flex;
+}
+#tinymce .checkIconText:before{
+    content: '';
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+    background: url(./img/page/icon_check.svg) no-repeat center / 100% auto;
+}
+
