@@ -1,0 +1,21 @@
+$primary-color: #3490dc;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--color3);
+
+    h1 {
+        margin: 0 auto 30px;
+        text-align: center;
+        color: var(--color1);
+    }
+}
