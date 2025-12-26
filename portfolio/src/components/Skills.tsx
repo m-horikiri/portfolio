@@ -37,8 +37,8 @@ export default function Skills() {
       text: 'text-purple-500',
       items: [
         { label: 'jQuery', icon: faCode, stars: 5 },
-        { label: 'TypeScript', icon: faCode, stars: 2 },
-        { label: 'React', icon: faCode, stars: 2 },
+        { label: 'TypeScript', icon: faCode, stars: 4 },
+        { label: 'React', icon: faCode, stars: 3 },
         { label: 'Laravel', icon: faCode, stars: 2 },
       ],
     },
